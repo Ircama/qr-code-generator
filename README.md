@@ -1,6 +1,7 @@
-# qr-code-generator
-QR code Generator
+# QR-code generator (Bar generator)
 
-QR - BARCODE GENERATOR
+QR-code generator (Bar generator)  by Dariusz Rorat ([dariuszrorat](http://sourceforge.net/users/dariuszrorat)).
 
-Imported from https://sourceforge.net/projects/bargenerator/
+Imported from [sourceforge](https://sourceforge.net/projects/bargenerator/)
+
+This light and easy tool is excellent to quickly transmit text data from a PC to a Smartphone without usage of any wireless or wired link.

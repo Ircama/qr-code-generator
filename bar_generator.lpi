@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="7"/>
+    <General>
+      <Flags>
+        <UseDefaultCompilerOptions Value="True"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=".exe"/>
+      <Title Value="Bar generator"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable Comments="" CompanyName="" FileDescription="" FileVersion="" InternalName="" LegalCopyright="" LegalTrademarks="" OriginalFilename="" ProductName="" ProductVersion=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="bar_generator.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="bar_generator"/>
+        <UsageCount Value="22"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="srcmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="srcmain"/>
+        <CursorPos X="48" Y="132"/>
+        <TopLine Value="103"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <IsVisibleTab Value="True"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="programconsts.pas"/>
+        <UnitName Value="ProgramConsts"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="9" Column="39" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="52" Column="31" TopLine="21"/>
+      </Position2>
+      <Position3>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="57" Column="25" TopLine="28"/>
+      </Position3>
+      <Position4>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="58" Column="25" TopLine="38"/>
+      </Position4>
+      <Position5>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="59" Column="25" TopLine="39"/>
+      </Position5>
+      <Position6>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="58" Column="25" TopLine="39"/>
+      </Position6>
+      <Position7>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="57" Column="25" TopLine="39"/>
+      </Position7>
+      <Position8>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="56" Column="25" TopLine="39"/>
+      </Position8>
+      <Position9>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="63" Column="25" TopLine="43"/>
+      </Position9>
+      <Position10>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="58" Column="9" TopLine="47"/>
+      </Position10>
+      <Position11>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="60" Column="9" TopLine="47"/>
+      </Position11>
+      <Position12>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="74" Column="30" TopLine="54"/>
+      </Position12>
+      <Position13>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="66" Column="3" TopLine="61"/>
+      </Position13>
+      <Position14>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="78" Column="12" TopLine="58"/>
+      </Position14>
+      <Position15>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="74" Column="19" TopLine="51"/>
+      </Position15>
+      <Position16>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="132" Column="18" TopLine="99"/>
+      </Position16>
+      <Position17>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="76" Column="39" TopLine="57"/>
+      </Position17>
+      <Position18>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="121" Column="18" TopLine="118"/>
+      </Position18>
+      <Position19>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="127" Column="37" TopLine="113"/>
+      </Position19>
+      <Position20>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="128" Column="37" TopLine="113"/>
+      </Position20>
+      <Position21>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="100" Column="35" TopLine="80"/>
+      </Position21>
+      <Position22>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="145" Column="18" TopLine="143"/>
+      </Position22>
+      <Position23>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="144" Column="18" TopLine="143"/>
+      </Position23>
+      <Position24>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="151" Column="16" TopLine="143"/>
+      </Position24>
+      <Position25>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="150" Column="16" TopLine="143"/>
+      </Position25>
+      <Position26>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="149" Column="16" TopLine="143"/>
+      </Position26>
+      <Position27>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="150" Column="16" TopLine="143"/>
+      </Position27>
+      <Position28>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="125" Column="3" TopLine="100"/>
+      </Position28>
+      <Position29>
+        <Filename Value="programconsts.pas"/>
+        <Caret Line="1" Column="20" TopLine="1"/>
+      </Position29>
+      <Position30>
+        <Filename Value="srcmain.pas"/>
+        <Caret Line="49" Column="3" TopLine="39"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="bar_generator"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)\"/>
+      <OtherUnitFiles Value="$(LazarusDir)\components\lazrichview\;C:\Lazarus\components\LazbarCodes\packages\lib\i386-win32\;$(LazarusDir)\components\lazrichview\lib\i386-win32\"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

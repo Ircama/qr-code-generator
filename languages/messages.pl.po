@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Dariusz Rorat <drorat1@o2.pl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: programconsts:strcaption
+msgid "Bar code generator"
+msgstr "Generator kodów paskowych"
+
+#: programconsts:strcodetype
+msgid "Code type"
+msgstr "Typ kodu"
+
+#: programconsts:strecclevel
+msgid "ECC Level"
+msgstr "Poziom ECC"
+
+#: programconsts:strloadfromtext
+msgid "Load text"
+msgstr "Załaduj tekst"
+
+#: programconsts:strquit
+msgid "Quit"
+msgstr "Wyjdź"
+
+#: programconsts:strfilter
+msgid "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+msgstr "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*"
+
+#: programconsts:stropendialogtitle
+msgid "Open existing file"
+msgstr "Otwórz istniejący plik"
+
+#: programconsts:strconverterror
+msgid "Could not to convert text"
+msgstr "Nie można dokonać konwersji"
+
