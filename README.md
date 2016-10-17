@@ -1,17 +1,108 @@
-# QR-code generator (Bar generator)
+# QR-Code Generator (Bar generator)
 
-QR-code generator (Bar generator)  by Dariusz Rorat ([dariuszrorat](http://sourceforge.net/users/dariuszrorat)).
+**QR-Code Generator 1.2**
 
-Code for the [Lazarus](http://www.lazarus-ide.org/) IDE.
+(formerly named Bar Generator)
 
-Imported from [sourceforge](https://sourceforge.net/projects/bargenerator/).
+This Windows/MacOS/Linux desktop software generates formatted QR codes, like standard texts, browser URLs, phone call numbers, contacts, emails, SMS, MMS, calendar notes, youtube URLs, geographic locations, wifi configuration, Google Play links, etc.
 
-QR Code, Aztec and Data Matrix Code generator.
+[Download the Windows version](https://github.com/Ircama/qr-code-generator/releases) from this [link](https://github.com/Ircama/qr-code-generator/releases/download/1.2/bar_generator.zip).
 
-Original screenshots:
+A typical usage of this tool is to easily transfer preformatted text data from a PC to a Smartphone without usage of any wireless or wired link.
 
-![QR Code text](https://cloud.githubusercontent.com/assets/8292987/19453453/936c8098-94b5-11e6-9a9c-14a1a59f5f27.png)
+Sending a message to a mobile phone (e.g., to write an email, or an SMS text, or a long string) can be done without the need to digit the text through the Smartphone standard input device (like the touchscreen); simply open the Bar Generator on a PC, write the message on the PC (or paste it from a PC application, including integration with Microsoft Word); open a Scan Code app on the Smartphone and get the text to the Smartphone, ready to be copied and pasted to any other SmartPhone app.
 
-![Aztec Code text](https://cloud.githubusercontent.com/assets/8292987/19453454/936f8a68-94b5-11e6-859c-a447a55456b9.png)
+The source code is in [Object Pascal](https://en.wikipedia.org/wiki/Object_Pascal) language, developed through the cross-platform [Lazarus IDE](http://www.lazarus-ide.org/). It can be freely copiled to your favorite OS including Windows, MacOS, Linux.
 
-![Data Matrix Code text](https://cloud.githubusercontent.com/assets/8292987/19453452/9364b62e-94b5-11e6-9d02-2c1e715f3d73.png)
+See [Installing Lazarus](http://wiki.freepascal.org/Installing_Lazarus) for setting up this [IDE](https://en.wikipedia.org/wiki/Lazarus_(IDE)).
+
+Features:
+
+* Selection of QR Message types:
+  - Memo (standard),
+  - SMS (supports SMS and SMSTO formats),
+  - MMS,
+  - Email (supports mail and mailto formats),
+  - URI (18 different types),
+  - Telephone,
+  - Geo-positioning,
+  - Contact (both vCard and meCard formats),
+  - Event (with automatic local time),
+  - Wifi Configuration (WEP, WPA/2 and no encryption). Wifi is only supported by Android.
+* Integration with Microsoft Word (options to send and receive from Microsoft Word)
+* Setting for QR Code, Aztec, Data Matrix Code generator and Textual (debug).
+* Selection of message type formats: Standard, UTF8, UNICODE
+* CR+LN toggle (carriage return + line feed for Windows scan processing or line feed for UNIX/Smartphones scan processing)
+* Setting for automatic or manual ECC level/Error Correction (codewords which can be restored: L=7%, M=15%, Q=25%, H=30%)
+* Buttons to generate SMS or Email from the clipboard
+* Button to load mesage from text
+* Keyboard shortcuts:
+  - <kbd>ALT</kbd> <kbd>M</kbd> to change the message format
+  - <kbd>ALT</kbd> <kbd>T</kbd>: input text
+  - <kbd>ALT</kbd> <kbd>E</kbd>: ECC Level
+  - <kbd>ALT</kbd> <kbd>Q</kbd>: bar format
+  - <kbd>ALT</kbd> <kbd>C</kbd>: CR-NL toggle
+  - <kbd>ESC</kbd>: quit
+  - <kbd>ALT</kbd> <kbd>L to load text file
+
+The QR-Code Generator can also be linked to a keyboard shortcut (e.g., Alt-Grp S) via [AutoHotkey](https://autohotkey.com/) or similar software. Example of [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) script <kbd>Alt Gr</kbd>+<kbd>S</kbd> in case the QR Code Generator software is installed to *C:\Program Files\Qr\bar_generator.exe*:
+
+```AutoHotkey
+SetCapslockState AlwaysOff
+SetTitleMatchMode, 2
+
+;Open Bar Generator with AltGr S
+<^>!s::
+IfWinExist QR code generator
+WinActivate QR code generator
+else
+Run, "C:\Program Files\Qr\bar_generator.exe", , max, OutputVarPID
+WinWait, ahk_pid %OutputVarPID%
+WinActivate, ahk_pid %OutputVarPID%
+return
+; note: set "SetTitleMatchMode, 2" at the beginning of the file
+```
+
+Some screenshots of QR-Code Generator:
+
+Memo
+
+![qr-code-memo](https://cloud.githubusercontent.com/assets/8292987/19455469/6c9c710a-94bd-11e6-8033-3abe121793e5.png)
+
+SMS
+
+![qr-code-sms](https://cloud.githubusercontent.com/assets/8292987/19455474/6cac0f16-94bd-11e6-89f9-3cfeece736b6.png)
+
+Email
+
+![qr-code-email](https://cloud.githubusercontent.com/assets/8292987/19455476/6cb06d5e-94bd-11e6-9f99-458c2348323f.png)
+
+URI
+
+![qr-code-uri](https://cloud.githubusercontent.com/assets/8292987/19455475/6caed1b0-94bd-11e6-8e24-6fd3725dbcfb.png)
+
+Telephone
+
+![qr-code-tel](https://cloud.githubusercontent.com/assets/8292987/19455470/6c9f7ea4-94bd-11e6-860b-6d8c36bee30a.png)
+
+Geo-positioning
+
+![qr-code-geo](https://cloud.githubusercontent.com/assets/8292987/19455471/6ca5ada6-94bd-11e6-9416-635ed1afb115.png)
+
+Contact
+
+![qr-code-contact](https://cloud.githubusercontent.com/assets/8292987/19455472/6ca79f08-94bd-11e6-9fc2-70a5de07bd43.png)
+
+Event
+
+![qr-code-event](https://cloud.githubusercontent.com/assets/8292987/19455468/6c9aa708-94bd-11e6-933b-b59c1bbd5086.png)
+
+WiFi Configuration (only Android)
+
+![qr-code-wifi](https://cloud.githubusercontent.com/assets/8292987/19455473/6caa255c-94bd-11e6-8346-1349f58cbbda.png)
+
+## Credits
+
+Original code (version 1.0) by by Dariusz Rorat ([dariuszrorat](http://sourceforge.net/users/dariuszrorat)).
+
+Original sources imported from [sourceforge](https://sourceforge.net/projects/bargenerator/).

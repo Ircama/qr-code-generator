@@ -28,9 +28,9 @@ interface
 
 resourcestring
 
-  strCaption = 'Bar code generator';
-  strCodeType = 'Code type';
-  strEccLevel = 'ECC Level';
+  strCaption = 'QR code generator';
+  strCodeType = 'Format:';
+  strEccLevel = 'ECC Level:';
   strLoadFromText = 'Load text';
   strQuit = 'Quit';
   strFilter = 'Text files (*.txt)|*.txt|All files (*.*)|*.*';

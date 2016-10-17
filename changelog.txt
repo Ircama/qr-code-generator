@@ -1,0 +1,47 @@
+QR - BARCODE GENERATOR
+https://sourceforge.net/projects/bargenerator/
+======================================================================================================
+
+bar_generator.exe v1.2
+September 6, 2014
+----------------------
+
+Added features:
+
+Selection of message type formats: Standard, UTF8, UNICODE
+
+Added/Improved QR Message types: SMS, Email, URI, Geo, Contact, Event, Wifi
+
+Textual (debug) option.
+
+Keyboard shortcuts:
+- ALT L to load text file
+
+======================================================================================================
+bar_generator.exe v1.1
+September 4, 2014
+
+Added features:
+
+Selection of message type formats: Standard, UTF8, UNICODE
+
+QR Message types: default, SMS, Web, Email, Tel, Geo
+
+CR+LN toggle (carriage return + line feed for Windows scan processing or line feed for UNIX/Smartphones scan processing)
+
+Keyboard shortcuts:
+- ALT M to change the message format
+- ALT T: input text
+- ALT E: ECC Level
+- ALT Q: bar format
+- ALT C: CR-NL toggle
+- ESC quit
+
+======================================================================================================
+
+28.5.2012: Changes in charencstreams.WideSwapEndian from Keith. See http://forum.lazarus.freepascal.org/index.php/topic,16991.0.html
+
+======================================================================================================
+
+bar_generator.exe v1.0
+initial release

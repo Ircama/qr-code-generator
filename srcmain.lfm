@@ -1,78 +1,67 @@
 object frmMain: TfrmMain
-  Left = 250
-  Height = 376
-  Top = 183
-  Width = 640
+  Left = 297
+  Height = 370
+  Top = 112
+  Width = 795
+  Align = alTop
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Bar code generator'
-  ClientHeight = 376
-  ClientWidth = 640
+  Caption = 'QR code generator'
+  ClientHeight = 370
+  ClientWidth = 795
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
   Position = poMainFormCenter
-  LCLVersion = '0.9.29'
-  object Shape1: TShape
-    Left = 8
-    Height = 360
-    Top = 8
-    Width = 296
-    Brush.Color = clBtnFace
-  end
+  LCLVersion = '1.2.6.0'
   object Shape2: TShape
-    Left = 312
+    Left = 465
     Height = 320
     Top = 8
     Width = 320
   end
-  object InMemo: TMemo
-    Left = 16
-    Height = 274
-    Top = 16
-    Width = 280
-    OnChange = InMemoChange
-    ScrollBars = ssAutoBoth
-    TabOrder = 0
-  end
   object Label1: TLabel
-    Left = 24
-    Height = 14
-    Top = 304
-    Width = 25
-    Caption = 'Type'
+    Left = 16
+    Height = 15
+    Top = 344
+    Width = 41
+    Caption = 'Format:'
     ParentColor = False
   end
   object cboCodeType: TComboBox
-    Left = 120
-    Height = 21
-    Top = 304
-    Width = 152
+    Left = 60
+    Height = 23
+    Top = 340
+    Width = 72
     AutoComplete = True
     AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-    ItemHeight = 13
+    ItemHeight = 15
     ItemIndex = 0
     Items.Strings = (
-      'QR'
-      'Aztec'
-      'Data Matrix'
+      'Standard'
+      'UTF8 tags'
+      'UTF8'
     )
+    OnChange = cboCodeTypeChange
     OnEditingDone = cboCodeTypeEditingDone
+    Style = csDropDownList
     TabOrder = 1
-    Text = 'QR'
+    Text = 'Standard'
   end
   object Label2: TLabel
-    Left = 24
-    Height = 14
-    Top = 328
-    Width = 49
-    Caption = 'ECC Level'
+    Left = 160
+    Height = 15
+    Top = 344
+    Width = 55
+    Caption = 'ECC Level:'
     ParentColor = False
   end
   object cboECCLevel: TComboBox
-    Left = 120
-    Height = 21
-    Top = 328
-    Width = 100
-    ItemHeight = 13
+    Left = 219
+    Height = 23
+    Top = 340
+    Width = 72
+    ItemHeight = 15
     ItemIndex = 0
     Items.Strings = (
       'auto'
@@ -81,15 +70,17 @@ object frmMain: TfrmMain
       'Q (25%)'
       'H (30%)'
     )
+    OnChange = cboECCLevelChange
     OnEditingDone = cboECCLevelEditingDone
+    Style = csDropDownList
     TabOrder = 2
     Text = 'auto'
   end
   object btnLoadText: TBitBtn
-    Left = 312
+    Left = 584
     Height = 30
     Top = 336
-    Width = 104
+    Width = 96
     Caption = 'Load text'
     Glyph.Data = {
       46050000424D4605000000000000360000002800000012000000120000000100
@@ -137,24 +128,831 @@ object frmMain: TfrmMain
       00000000000000000000
     }
     OnClick = btnLoadTextClick
-    TabOrder = 3
+    TabOrder = 5
   end
   object btnQuit: TBitBtn
-    Left = 557
+    Left = 721
     Height = 30
     Top = 336
-    Width = 75
+    Width = 64
     Caption = 'Quit'
     Kind = bkClose
     OnClick = btnQuitClick
+    TabOrder = 6
+  end
+  object crNlCkb: TCheckBox
+    Left = 488
+    Height = 19
+    Top = 340
+    Width = 58
+    Caption = '&CR+NL'
+    OnChange = crNlCkbChange
     TabOrder = 4
+  end
+  object cboBarFormat: TComboBox
+    Left = 352
+    Height = 23
+    Top = 340
+    Width = 86
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'QR'
+      'Aztec'
+      'Data Matrix'
+      'Textual'
+    )
+    OnChange = cboBarFormatChange
+    Style = csDropDownList
+    TabOrder = 3
+    Text = 'QR'
+  end
+  object formatOptions: TPageControl
+    Left = 8
+    Height = 320
+    Top = 8
+    Width = 448
+    ActivePage = Memo
+    MultiLine = True
+    TabIndex = 0
+    TabOrder = 0
+    OnChange = formatOptionsChange
+    Options = [nboMultiLine]
+    object Memo: TTabSheet
+      Caption = 'Memo'
+      ClientHeight = 292
+      ClientWidth = 440
+      object InMemo: TMemo
+        Left = 2
+        Height = 284
+        Top = 5
+        Width = 433
+        OnChange = InMemoChange
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+    object SMS: TTabSheet
+      Caption = 'SMS'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label6: TLabel
+        Left = 5
+        Height = 15
+        Top = 14
+        Width = 17
+        Caption = 'To:'
+        ParentColor = False
+      end
+      object smsTo: TEdit
+        Left = 36
+        Height = 23
+        Top = 8
+        Width = 262
+        OnChange = emailCcChange
+        TabOrder = 0
+      end
+      object smsBody: TMemo
+        Left = 5
+        Height = 247
+        Top = 40
+        Width = 429
+        OnChange = emailBodyChange
+        ScrollBars = ssAutoBoth
+        TabOrder = 1
+      end
+      object mmsCkb: TCheckBox
+        Left = 312
+        Height = 19
+        Top = 12
+        Width = 48
+        Caption = 'MMS'
+        OnChange = mmsCkbChange
+        TabOrder = 2
+      end
+      object smsOpt: TCheckBox
+        Left = 376
+        Height = 19
+        Top = 12
+        Width = 57
+        Caption = 'TO opt'
+        Checked = True
+        OnChange = smsOptChange
+        State = cbChecked
+        TabOrder = 3
+      end
+    end
+    object email: TTabSheet
+      Caption = 'Email'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label3: TLabel
+        Left = 8
+        Height = 15
+        Top = 72
+        Width = 42
+        Caption = 'Subject:'
+        ParentColor = False
+      end
+      object emailSubject: TMemo
+        Left = 64
+        Height = 41
+        Top = 68
+        Width = 370
+        OnChange = emailSubjectChange
+        TabOrder = 2
+        WantReturns = False
+      end
+      object Label4: TLabel
+        Left = 9
+        Height = 15
+        Top = 104
+        Width = 30
+        Caption = 'Body:'
+        ParentColor = False
+      end
+      object emailBody: TMemo
+        Left = 8
+        Height = 164
+        Top = 120
+        Width = 426
+        OnChange = emailBodyChange
+        ScrollBars = ssAutoBoth
+        TabOrder = 3
+      end
+      object Label5: TLabel
+        Left = 9
+        Height = 15
+        Top = 12
+        Width = 17
+        Caption = 'To:'
+        ParentColor = False
+      end
+      object emailCc: TEdit
+        Left = 44
+        Height = 23
+        Top = 37
+        Width = 390
+        OnChange = emailCcChange
+        TabOrder = 1
+      end
+      object Label12: TLabel
+        Left = 9
+        Height = 15
+        Top = 42
+        Width = 17
+        Caption = 'Cc:'
+        ParentColor = False
+      end
+      object emailTo: TEdit
+        Left = 44
+        Height = 23
+        Top = 6
+        Width = 318
+        OnChange = emailToChange
+        TabOrder = 0
+      end
+      object mailOpt: TCheckBox
+        Left = 375
+        Height = 19
+        Top = 8
+        Width = 57
+        Caption = 'TO opt'
+        Checked = True
+        OnChange = mailOptChange
+        State = cbChecked
+        TabOrder = 4
+      end
+    end
+    object Url: TTabSheet
+      Caption = 'URI'
+      ClientHeight = 292
+      ClientWidth = 440
+      object urlContent: TMemo
+        Left = 14
+        Height = 208
+        Top = 64
+        Width = 411
+        OnChange = emailSubjectChange
+        TabOrder = 1
+        WantReturns = False
+      end
+      object Label7: TLabel
+        Left = 9
+        Height = 15
+        Top = 28
+        Width = 47
+        Caption = 'URI type:'
+        ParentColor = False
+      end
+      object cboUrlType: TComboBox
+        Left = 72
+        Height = 23
+        Top = 24
+        Width = 200
+        ItemHeight = 15
+        Items.Strings = (
+          ''
+          'Web (http)'
+          'Web (https)'
+          'Music'
+          'Video'
+          'Youtube'
+          'iBook'
+          'Facebook'
+          'Mail'
+          'FTP'
+          'Telephone'
+          'SMS'
+          'MMS'
+          'Facetime'
+          'Skype'
+          'iTunes'
+          'Google Play'
+          'Blackberry'
+        )
+        OnChange = cboUrlTypeChange
+        Style = csDropDownList
+        TabOrder = 0
+      end
+    end
+    object Tel: TTabSheet
+      Caption = 'Tel'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label8: TLabel
+        Left = 9
+        Height = 15
+        Top = 14
+        Width = 59
+        Caption = 'Telephone:'
+        ParentColor = False
+      end
+      object telNum: TMemo
+        Left = 8
+        Height = 25
+        Top = 40
+        Width = 424
+        OnChange = emailSubjectChange
+        TabOrder = 0
+        WantReturns = False
+      end
+    end
+    object Geo: TTabSheet
+      Caption = 'Geo'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label9: TLabel
+        Left = 8
+        Height = 15
+        Top = 24
+        Width = 46
+        Caption = 'Latitude:'
+        ParentColor = False
+      end
+      object Label10: TLabel
+        Left = 8
+        Height = 15
+        Top = 56
+        Width = 57
+        Caption = 'Longitude:'
+        ParentColor = False
+      end
+      object Label11: TLabel
+        Left = 8
+        Height = 15
+        Top = 88
+        Width = 45
+        Caption = 'Altitude:'
+        ParentColor = False
+      end
+      object geoLatitude: TEdit
+        Left = 78
+        Height = 23
+        Top = 16
+        Width = 250
+        OnChange = geoLatitudeChange
+        TabOrder = 0
+      end
+      object geoLongitude: TEdit
+        Left = 78
+        Height = 23
+        Top = 48
+        Width = 250
+        OnChange = geoLongitudeChange
+        TabOrder = 1
+      end
+      object geoAltitude: TEdit
+        Left = 78
+        Height = 23
+        Top = 82
+        Width = 250
+        OnChange = geoAltitudeChange
+        TabOrder = 2
+      end
+      object Label36: TLabel
+        Left = 11
+        Height = 15
+        Top = 120
+        Width = 32
+        Caption = 'Query'
+        ParentColor = False
+      end
+      object geoQuery: TEdit
+        Left = 78
+        Height = 23
+        Top = 118
+        Width = 250
+        OnChange = geoQueryChange
+        TabOrder = 3
+      end
+      object Label37: TLabel
+        Left = 11
+        Height = 15
+        Top = 189
+        Width = 47
+        Caption = 'Geocode'
+        ParentColor = False
+      end
+      object geoLocation: TEdit
+        Left = 78
+        Height = 23
+        Top = 184
+        Width = 250
+        OnChange = geoLocationChange
+        TabOrder = 4
+      end
+      object Label38: TLabel
+        Left = 11
+        Height = 15
+        Top = 160
+        Width = 200
+        Caption = 'Alternative query (geocoded address):'
+        ParentColor = False
+      end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'Contact'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label13: TLabel
+        Left = 8
+        Height = 15
+        Top = 10
+        Width = 32
+        Caption = 'Name'
+        ParentColor = False
+      end
+      object Label14: TLabel
+        Left = 8
+        Height = 15
+        Top = 39
+        Width = 47
+        Caption = 'Surname'
+        ParentColor = False
+      end
+      object Label15: TLabel
+        Left = 8
+        Height = 15
+        Top = 96
+        Width = 52
+        Caption = 'Company'
+        ParentColor = False
+      end
+      object Label16: TLabel
+        Left = 8
+        Height = 15
+        Top = 126
+        Width = 23
+        Caption = 'Title'
+        ParentColor = False
+      end
+      object Label17: TLabel
+        Left = 8
+        Height = 15
+        Top = 156
+        Width = 69
+        Caption = 'Office phone'
+        ParentColor = False
+      end
+      object Label18: TLabel
+        Left = 8
+        Height = 15
+        Top = 186
+        Width = 74
+        Caption = 'Mobile phone'
+        ParentColor = False
+      end
+      object Label19: TLabel
+        Left = 8
+        Height = 15
+        Top = 217
+        Width = 17
+        Caption = 'Fax'
+        ParentColor = False
+      end
+      object Label20: TLabel
+        Left = 8
+        Height = 15
+        Top = 245
+        Width = 71
+        Caption = 'House phone'
+        ParentColor = False
+      end
+      object Label21: TLabel
+        Left = 8
+        Height = 15
+        Top = 272
+        Width = 76
+        Caption = 'Private Mobile'
+        ParentColor = False
+      end
+      object Label22: TLabel
+        Left = 232
+        Height = 15
+        Top = 8
+        Width = 73
+        Caption = 'Work Address'
+        ParentColor = False
+      end
+      object Label23: TLabel
+        Left = 232
+        Height = 15
+        Top = 80
+        Width = 78
+        Caption = 'Home Address'
+        ParentColor = False
+      end
+      object Label24: TLabel
+        Left = 8
+        Height = 15
+        Top = 67
+        Width = 29
+        Caption = 'Email'
+        ParentColor = False
+      end
+      object contactName: TEdit
+        Left = 71
+        Height = 23
+        Top = 7
+        Width = 152
+        OnChange = contactNameChange
+        TabOrder = 0
+      end
+      object contactSurname: TEdit
+        Left = 71
+        Height = 23
+        Top = 34
+        Width = 152
+        OnChange = contactSurnameChange
+        TabOrder = 1
+      end
+      object contactEmail: TEdit
+        Left = 71
+        Height = 23
+        Top = 61
+        Width = 152
+        OnChange = contactEmailChange
+        TabOrder = 2
+      end
+      object contactCompany: TEdit
+        Left = 71
+        Height = 23
+        Top = 90
+        Width = 152
+        OnChange = contactCompanyChange
+        TabOrder = 3
+      end
+      object contactTitle: TEdit
+        Left = 71
+        Height = 23
+        Top = 120
+        Width = 152
+        OnChange = contactTitleChange
+        TabOrder = 4
+      end
+      object contactWorkPhone: TEdit
+        Left = 92
+        Height = 23
+        Top = 150
+        Width = 131
+        OnChange = contactWorkPhoneChange
+        TabOrder = 5
+      end
+      object contactWorkMobile: TEdit
+        Left = 93
+        Height = 23
+        Top = 179
+        Width = 131
+        OnChange = contactWorkMobileChange
+        TabOrder = 6
+      end
+      object contactWorkFax: TEdit
+        Left = 92
+        Height = 23
+        Top = 209
+        Width = 131
+        OnChange = contactWorkFaxChange
+        TabOrder = 7
+      end
+      object contactHomePhone: TEdit
+        Left = 93
+        Height = 23
+        Top = 238
+        Width = 131
+        OnChange = contactHomePhoneChange
+        TabOrder = 8
+      end
+      object contactHomeMobile: TEdit
+        Left = 93
+        Height = 23
+        Top = 267
+        Width = 131
+        OnChange = contactHomeMobileChange
+        TabOrder = 9
+      end
+      object contactWorkAddress: TMemo
+        Left = 232
+        Height = 48
+        Top = 24
+        Width = 196
+        OnChange = contactWorkAddressChange
+        TabOrder = 10
+      end
+      object contactHomeAddress: TMemo
+        Left = 232
+        Height = 55
+        Top = 97
+        Width = 196
+        OnChange = contactHomeAddressChange
+        TabOrder = 11
+      end
+      object Label30: TLabel
+        Left = 234
+        Height = 15
+        Top = 161
+        Width = 26
+        Caption = 'Note'
+        ParentColor = False
+      end
+      object contactNote: TMemo
+        Left = 232
+        Height = 47
+        Top = 176
+        Width = 196
+        OnChange = contactNoteChange
+        TabOrder = 12
+      end
+      object Label31: TLabel
+        Left = 234
+        Height = 15
+        Top = 235
+        Width = 15
+        Caption = 'Url'
+        ParentColor = False
+      end
+      object contactUrl: TMemo
+        Left = 232
+        Height = 33
+        Top = 254
+        Width = 196
+        OnChange = contactUrlChange
+        TabOrder = 13
+      end
+    end
+    object eventDescription: TTabSheet
+      Caption = 'Event'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label25: TLabel
+        Left = 16
+        Height = 15
+        Top = 24
+        Width = 51
+        Caption = 'Summary'
+        ParentColor = False
+      end
+      object Label26: TLabel
+        Left = 16
+        Height = 15
+        Top = 57
+        Width = 50
+        Caption = 'Start date'
+        ParentColor = False
+      end
+      object Label27: TLabel
+        Left = 16
+        Height = 15
+        Top = 93
+        Width = 47
+        Caption = 'End Date'
+        ParentColor = False
+      end
+      object Label28: TLabel
+        Left = 16
+        Height = 15
+        Top = 128
+        Width = 46
+        Caption = 'Location'
+        ParentColor = False
+      end
+      object Label29: TLabel
+        Left = 16
+        Height = 15
+        Top = 160
+        Width = 60
+        Caption = 'Description'
+        ParentColor = False
+      end
+      object eventSummary: TEdit
+        Left = 92
+        Height = 23
+        Top = 19
+        Width = 335
+        OnChange = eventSummaryChange
+        TabOrder = 0
+      end
+      object eventLocation: TEdit
+        Left = 92
+        Height = 23
+        Top = 120
+        Width = 335
+        OnChange = eventLocationChange
+        TabOrder = 4
+      end
+      object eventDescr: TEdit
+        Left = 92
+        Height = 23
+        Top = 157
+        Width = 335
+        OnChange = eventDescrChange
+        TabOrder = 5
+      end
+      object eventStartDate: TZVDateTimePicker
+        Left = 92
+        Height = 23
+        Top = 54
+        Width = 137
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'Not set'
+        LeadingZeros = True
+        Kind = dtkDateTime
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 1.7E308
+        Time = 1.7E308
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = eventStartDateChange
+      end
+      object eventEndDate: TZVDateTimePicker
+        Left = 92
+        Height = 23
+        Top = 88
+        Width = 137
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 3
+        TrailingSeparator = False
+        TextForNullDate = 'Not set'
+        LeadingZeros = True
+        Kind = dtkDateTime
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 1.7E308
+        Time = 1.7E308
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnChange = eventEndDateChange
+      end
+      object eventStartAllDay: TCheckBox
+        Left = 254
+        Height = 19
+        Top = 57
+        Width = 88
+        Caption = 'All day event'
+        OnChange = eventStartAllDayChange
+        TabOrder = 2
+      end
+      object Label32: TLabel
+        Left = 17
+        Height = 15
+        Top = 198
+        Width = 55
+        Caption = 'Local time'
+        ParentColor = False
+      end
+      object eventLocalTimeOffset: TEdit
+        Left = 92
+        Height = 15
+        Top = 198
+        Width = 142
+        BorderStyle = bsNone
+        OnChange = eventLocalTimeOffsetChange
+        ReadOnly = True
+        TabOrder = 6
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Wifi'
+      ClientHeight = 292
+      ClientWidth = 440
+      object Label33: TLabel
+        Left = 26
+        Height = 15
+        Top = 23
+        Width = 23
+        Caption = 'SSID'
+        ParentColor = False
+      end
+      object Label34: TLabel
+        Left = 26
+        Height = 15
+        Top = 63
+        Width = 50
+        Caption = 'Password'
+        ParentColor = False
+      end
+      object networkHidden: TCheckBox
+        Left = 88
+        Height = 19
+        Top = 104
+        Width = 59
+        Caption = 'Hidden'
+        OnChange = networkHiddenChange
+        TabOrder = 2
+      end
+      object networkProt: TComboBox
+        Left = 88
+        Height = 23
+        Top = 144
+        Width = 152
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'WEP'
+          'WPA/WPA2'
+          'No encryption'
+        )
+        OnChange = networkProtChange
+        Style = csDropDownList
+        TabOrder = 3
+        Text = 'WEP'
+      end
+      object networkSsid: TEdit
+        Left = 88
+        Height = 23
+        Top = 16
+        Width = 328
+        OnChange = networkSsidChange
+        TabOrder = 0
+      end
+      object networkPassword: TEdit
+        Left = 88
+        Height = 23
+        Top = 63
+        Width = 328
+        OnChange = networkPasswordChange
+        TabOrder = 1
+      end
+      object Label35: TLabel
+        Left = 26
+        Height = 15
+        Top = 149
+        Width = 26
+        Caption = 'Type'
+        ParentColor = False
+      end
+    end
+  end
+  object textual: TMemo
+    Left = 465
+    Height = 320
+    Top = 8
+    Width = 320
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 7
+    TabStop = False
+    Visible = False
+    WantTabs = True
+    WordWrap = False
   end
   object OpenDialog: TOpenDialog
     Title = 'Open existing file'
     DefaultExt = '.txt'
     Filter = 'Text files (*.txt)|*.txt|All files (*.*)|*.*'
     Options = [ofExtensionDifferent, ofFileMustExist, ofEnableSizing, ofViewDetail]
-    left = 336
+    left = 489
     top = 264
   end
   object SavePictureDialog: TSavePictureDialog
@@ -162,7 +960,7 @@ object frmMain: TfrmMain
     DefaultExt = '.bmp'
     Filter = 'Windows Bitmap (*.bmp)|*.bmp'
     Options = [ofExtensionDifferent, ofEnableSizing, ofViewDetail]
-    left = 417
+    left = 570
     top = 264
   end
 end
