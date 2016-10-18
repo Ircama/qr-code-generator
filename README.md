@@ -4,11 +4,13 @@
 
 (formerly named Bar Generator)
 
-This Windows/MacOS/Linux desktop software generates formatted [QR codes](https://en.wikipedia.org/wiki/QR_code), like standard texts, browser URLs, phone call numbers, contacts, emails, SMS, MMS, calendar notes, youtube URLs, geographic locations, wifi configuration, Google Play links, etc.
+This Windows/MacOS/Linux desktop software generates formatted [matrix barcodes](https://en.wikipedia.org/wiki/Barcode#Matrix_.282D.29_barcodes), like standard texts, browser URLs, phone call numbers, contacts, emails, SMS, MMS, calendar notes, youtube URLs, geographic locations, wifi configuration, Google Play links, etc.
+
+Specifically, *QR-Code Generator* is able to generate [QR codes](https://en.wikipedia.org/wiki/QR_code), [Aztec codes](https://en.wikipedia.org/wiki/Aztec_Code) and [Data Matrix codes](https://en.wikipedia.org/wiki/Data_Matrix).
 
 [Download the Windows version](https://github.com/Ircama/qr-code-generator/releases) from this [link](https://github.com/Ircama/qr-code-generator/releases/download/1.2/bar_generator.zip).
 
-A typical usage of this tool is to easily transfer preformatted text data from a PC to a smartphone without usage of any wireless or wired link.
+A typical usage of this tool is to easily transfer preformatted text data from a PC to a smartphone via QR Code, without usage of any wireless or wired link.
 
 Sending a message to a smartphone (e.g., to write an email, an SMS text, or a long string) can be done without the need to digit the text through the smartphone touchscreen (or similar standard input device): simply open *QR-Code Generator* on a desktop computer, write there the message (or paste it from a PC application, including integration with Microsoft Word), then open your preferred [Scan Code App](https://en.wikipedia.org/wiki/Barcode_Scanner_(application)) on your smartphone and get the formatted text from the desktop computer by reading its QR code, ready to be subsequently copied and pasted to any other smartphone App.
 
