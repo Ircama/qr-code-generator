@@ -42,8 +42,8 @@ Features:
   - <kbd>Alt</kbd> <kbd>E</kbd>: ECC Level
   - <kbd>Alt</kbd> <kbd>Q</kbd>: bar format
   - <kbd>Alt</kbd> <kbd>C</kbd>: CR-NL toggle
-  - <kbd>ESC</kbd>: quit
-  - <kbd>Alt</kbd> <kbd>L to load text file
+  - <kbd>Esc</kbd>: quit
+  - <kbd>Alt</kbd> <kbd>L</kbd>: load text file
 
 *QR-Code Generator* can also be linked to a keyboard shortcut (e.g., Alt-Grp S) via [AutoHotkey](https://autohotkey.com/) or similar software. Example of [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) script <kbd>Alt Gr</kbd>+<kbd>S</kbd> in case the QR Code Generator software is installed to *C:\Program Files\Qr\bar_generator.exe*:
 
