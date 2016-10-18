@@ -4,15 +4,15 @@
 
 (formerly named Bar Generator)
 
-This Windows/MacOS/Linux desktop software generates formatted QR codes, like standard texts, browser URLs, phone call numbers, contacts, emails, SMS, MMS, calendar notes, youtube URLs, geographic locations, wifi configuration, Google Play links, etc.
+This Windows/MacOS/Linux desktop software generates formatted [QR codes](https://en.wikipedia.org/wiki/QR_code), like standard texts, browser URLs, phone call numbers, contacts, emails, SMS, MMS, calendar notes, youtube URLs, geographic locations, wifi configuration, Google Play links, etc.
 
 [Download the Windows version](https://github.com/Ircama/qr-code-generator/releases) from this [link](https://github.com/Ircama/qr-code-generator/releases/download/1.2/bar_generator.zip).
 
-A typical usage of this tool is to easily transfer preformatted text data from a PC to a Smartphone without usage of any wireless or wired link.
+A typical usage of this tool is to easily transfer preformatted text data from a PC to a smartphone without usage of any wireless or wired link.
 
-Sending a message to a mobile phone (e.g., to write an email, or an SMS text, or a long string) can be done without the need to digit the text through the Smartphone standard input device (like the touchscreen); simply open the Bar Generator on a PC, write the message on the PC (or paste it from a PC application, including integration with Microsoft Word); open a Scan Code app on the Smartphone and get the text to the Smartphone, ready to be copied and pasted to any other SmartPhone app.
+Sending a message to a smartphone (e.g., to write an email, an SMS text, or a long string) can be done without the need to digit the text through the smartphone touchscreen (or similar standard input device): simply open *QR-Code Generator* on a desktop computer, write there the message (or paste it from a PC application, including integration with Microsoft Word), then open your preferred [Scan Code App](https://en.wikipedia.org/wiki/Barcode_Scanner_(application)) on your smartphone and get the formatted text from the desktop computer by reading its QR code, ready to be subsequently copied and pasted to any other smartphone App.
 
-The source code is in [Object Pascal](https://en.wikipedia.org/wiki/Object_Pascal) language, developed through the cross-platform [Lazarus IDE](http://www.lazarus-ide.org/). It can be freely copiled to your favorite OS including Windows, MacOS, Linux.
+The source code of *QR-Code Generator* is in [Object Pascal](https://en.wikipedia.org/wiki/Object_Pascal) language, developed through the cross-platform [Lazarus IDE](http://www.lazarus-ide.org/). It can be freely compiled to your favorite OS including Windows, MacOS, Linux.
 
 See [Installing Lazarus](http://wiki.freepascal.org/Installing_Lazarus) for setting up this [IDE](https://en.wikipedia.org/wiki/Lazarus_(IDE)).
 
@@ -32,18 +32,18 @@ Features:
 * Integration with Microsoft Word (options to send and receive from Microsoft Word)
 * Setting for QR Code, Aztec, Data Matrix Code generator and Textual (debug).
 * Selection of message type formats: Standard, UTF8, UNICODE
-* CR+LN toggle (carriage return + line feed for Windows scan processing or line feed for UNIX/Smartphones scan processing)
+* CR+LN toggle (carriage return + line feed for Windows scan processing or line feed for UNIX/smartphones scan processing)
 * Setting for automatic or manual ECC level/Error Correction (codewords which can be restored: L=7%, M=15%, Q=25%, H=30%)
 * Buttons to generate SMS or Email from the clipboard
 * Button to load mesage from text
 * Keyboard shortcuts:
-  - <kbd>ALT</kbd> <kbd>M</kbd> to change the message format
-  - <kbd>ALT</kbd> <kbd>T</kbd>: input text
-  - <kbd>ALT</kbd> <kbd>E</kbd>: ECC Level
-  - <kbd>ALT</kbd> <kbd>Q</kbd>: bar format
-  - <kbd>ALT</kbd> <kbd>C</kbd>: CR-NL toggle
+  - <kbd>Alt</kbd> <kbd>M</kbd> to change the message format
+  - <kbd>Alt</kbd> <kbd>T</kbd>: input text
+  - <kbd>Alt</kbd> <kbd>E</kbd>: ECC Level
+  - <kbd>Alt</kbd> <kbd>Q</kbd>: bar format
+  - <kbd>Alt</kbd> <kbd>C</kbd>: CR-NL toggle
   - <kbd>ESC</kbd>: quit
-  - <kbd>ALT</kbd> <kbd>L to load text file
+  - <kbd>Alt</kbd> <kbd>L to load text file
 
 The QR-Code Generator can also be linked to a keyboard shortcut (e.g., Alt-Grp S) via [AutoHotkey](https://autohotkey.com/) or similar software. Example of [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) script <kbd>Alt Gr</kbd>+<kbd>S</kbd> in case the QR Code Generator software is installed to *C:\Program Files\Qr\bar_generator.exe*:
 
