@@ -45,13 +45,13 @@ Features:
   - <kbd>ESC</kbd>: quit
   - <kbd>Alt</kbd> <kbd>L to load text file
 
-The QR-Code Generator can also be linked to a keyboard shortcut (e.g., Alt-Grp S) via [AutoHotkey](https://autohotkey.com/) or similar software. Example of [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) script <kbd>Alt Gr</kbd>+<kbd>S</kbd> in case the QR Code Generator software is installed to *C:\Program Files\Qr\bar_generator.exe*:
+*QR-Code Generator* can also be linked to a keyboard shortcut (e.g., Alt-Grp S) via [AutoHotkey](https://autohotkey.com/) or similar software. Example of [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) script <kbd>Alt Gr</kbd>+<kbd>S</kbd> in case the QR Code Generator software is installed to *C:\Program Files\Qr\bar_generator.exe*:
 
 ```AutoHotkey
 SetCapslockState AlwaysOff
 SetTitleMatchMode, 2
 
-;Open Bar Generator with AltGr S
+;Open QR-Code Generator with AltGr S
 <^>!s::
 IfWinExist QR code generator
 WinActivate QR code generator
@@ -63,7 +63,7 @@ return
 ; note: set "SetTitleMatchMode, 2" at the beginning of the file
 ```
 
-Some screenshots of QR-Code Generator:
+Some screenshots of *QR-Code Generator*:
 
 Memo
 
