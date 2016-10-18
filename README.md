@@ -10,9 +10,9 @@ Specifically, *QR-Code Generator* is able to generate [QR codes](https://en.wiki
 
 [Download the Windows version](https://github.com/Ircama/qr-code-generator/releases) from this [link](https://github.com/Ircama/qr-code-generator/releases/download/1.2/bar_generator.zip).
 
-A typical usage of this tool is to easily transfer preformatted text data from a PC to a smartphone via QR Code, without usage of any wireless or wired link.
+A typical usage of this tool is to easily transfer preformatted text data from a desktop computer to a smartphone via QR Code, without usage of any wireless or wired link.
 
-Sending a message to a smartphone (e.g., to write an email, an SMS text, or a long string) can be done without the need to digit the text through the smartphone touchscreen (or similar standard input device): simply open *QR-Code Generator* on a desktop computer, write there the message (or paste it from a PC application, including integration with Microsoft Word), then open your preferred [Scan Code App](https://en.wikipedia.org/wiki/Barcode_Scanner_(application)) on your smartphone and get the formatted text from the desktop computer by reading its QR code, ready to be subsequently copied and pasted to any other smartphone App.
+Sending a message to a smartphone (e.g., to write an email, an SMS text, or a long string) can be done without the need to digit the text through the smartphone touchscreen (or similar standard input device): simply open *QR-Code Generator* on a desktop computer, write there the message (or paste it from a desktop application, including integration with Microsoft Word), then open your preferred [Scan Code App](https://en.wikipedia.org/wiki/Barcode_Scanner_(application)) on your smartphone and get the formatted text from the desktop computer by reading its QR code, ready to be subsequently copied and pasted to any other smartphone App.
 
 The source code of *QR-Code Generator* is in [Object Pascal](https://en.wikipedia.org/wiki/Object_Pascal) language, developed through the cross-platform [Lazarus IDE](http://www.lazarus-ide.org/). It can be freely compiled to your favorite OS including Windows, MacOS, Linux.
 
