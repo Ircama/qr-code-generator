@@ -788,7 +788,7 @@ object frmMain: TfrmMain
         OnChange = eventDescrChange
         TabOrder = 5
       end
-      object eventStartDate: TZVDateTimePicker
+      object eventStartDate: TDateTimePicker
         Left = 92
         Height = 23
         Top = 54
@@ -811,7 +811,7 @@ object frmMain: TfrmMain
         MonthNames = 'Long'
         OnChange = eventStartDateChange
       end
-      object eventEndDate: TZVDateTimePicker
+      object eventEndDate: TDateTimePicker
         Left = 92
         Height = 23
         Top = 88

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="9"/>
+    <Version Value="10"/>
     <PathDelim Value="\"/>
     <General>
       <MainUnit Value="0"/>
@@ -15,7 +15,7 @@
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="5"/>
-      <BuildNr Value="1"/>
+      <BuildNr Value="2"/>
       <Language Value=""/>
       <CharSet Value=""/>
       <StringTable LegalCopyright="GNU General Public License" ProductName="QR Bar Generator" ProductVersion="1"/>
@@ -37,7 +37,7 @@
     </RunParams>
     <RequiredPackages Count="4">
       <Item1>
-        <PackageName Value="ZVDateTimeCtrls"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item1>
       <Item2>
         <PackageName Value="LazControls"/>
@@ -49,7 +49,7 @@
         <PackageName Value="LCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="15">
+    <Units Count="16">
       <Unit0>
         <Filename Value="bar_generator.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -63,7 +63,7 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="468"/>
+        <TopLine Value="486"/>
         <CursorPos X="97" Y="490"/>
         <UsageCount Value="60"/>
         <Loaded Value="True"/>
@@ -72,7 +72,7 @@
       <Unit2>
         <Filename Value="programconsts.pas"/>
         <UnitName Value="ProgramConsts"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="19"/>
         <CursorPos X="28" Y="33"/>
         <UsageCount Value="28"/>
@@ -83,7 +83,7 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="61"/>
         <CursorPos X="6" Y="61"/>
         <UsageCount Value="28"/>
@@ -92,7 +92,6 @@
       </Unit3>
       <Unit4>
         <Filename Value="ubarcodes.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="2"/>
         <CursorPos X="19" Y="9"/>
@@ -159,130 +158,139 @@
       </Unit13>
       <Unit14>
         <Filename Value="uqr.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <CursorPos X="41" Y="7"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit14>
+      <Unit15>
+        <Filename Value="uaztec.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="2647"/>
+        <CursorPos X="24" Y="2657"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit15>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="272" Column="26" TopLine="265"/>
+        <Caret Line="768" Column="3" TopLine="766"/>
       </Position1>
       <Position2>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="779" Column="17" TopLine="765"/>
+        <Caret Line="770" Column="3" TopLine="768"/>
       </Position2>
       <Position3>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="768" Column="3" TopLine="766"/>
+        <Caret Line="795" Column="6" TopLine="789"/>
       </Position3>
       <Position4>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="770" Column="3" TopLine="768"/>
+        <Caret Line="125" Column="10" TopLine="116"/>
       </Position4>
       <Position5>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="795" Column="6" TopLine="789"/>
+        <Caret Line="259" Column="58" TopLine="245"/>
       </Position5>
       <Position6>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="125" Column="10" TopLine="116"/>
+        <Caret Line="264" Column="52" TopLine="246"/>
       </Position6>
       <Position7>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="259" Column="58" TopLine="245"/>
+        <Caret Line="263" Column="81" TopLine="245"/>
       </Position7>
       <Position8>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="264" Column="52" TopLine="246"/>
+        <Caret Line="239" Column="15" TopLine="237"/>
       </Position8>
       <Position9>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="263" Column="81" TopLine="245"/>
+        <Caret Line="580" Column="18" TopLine="567"/>
       </Position9>
       <Position10>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="239" Column="15" TopLine="237"/>
+        <Caret Line="396" Column="54" TopLine="395"/>
       </Position10>
       <Position11>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="580" Column="18" TopLine="567"/>
+        <Caret Line="484" Column="20" TopLine="473"/>
       </Position11>
       <Position12>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="396" Column="54" TopLine="395"/>
+        <Caret Line="472" Column="53" TopLine="463"/>
       </Position12>
       <Position13>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="484" Column="20" TopLine="473"/>
+        <Caret Line="445" Column="36" TopLine="434"/>
       </Position13>
       <Position14>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="472" Column="53" TopLine="463"/>
+        <Caret Line="498" Column="27" TopLine="476"/>
       </Position14>
       <Position15>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="445" Column="36" TopLine="434"/>
+        <Caret Line="489" Column="41" TopLine="479"/>
       </Position15>
       <Position16>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="498" Column="27" TopLine="476"/>
+        <Caret Line="494" Column="38" TopLine="476"/>
       </Position16>
       <Position17>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="489" Column="41" TopLine="479"/>
+        <Caret Line="489" Column="61" TopLine="478"/>
       </Position17>
       <Position18>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="494" Column="38" TopLine="476"/>
+        <Caret Line="34" Column="76" TopLine="12"/>
       </Position18>
       <Position19>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="489" Column="61" TopLine="478"/>
+        <Caret Line="493" Column="66" TopLine="479"/>
       </Position19>
       <Position20>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="34" Column="76" TopLine="12"/>
+        <Caret Line="738" Column="13" TopLine="719"/>
       </Position20>
       <Position21>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="493" Column="66" TopLine="479"/>
+        <Caret Line="792" Column="26" TopLine="773"/>
       </Position21>
       <Position22>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="738" Column="13" TopLine="719"/>
+        <Caret Line="113" Column="11" TopLine="103"/>
       </Position22>
       <Position23>
         <Filename Value="srcmain.pas"/>
-        <Caret Line="792" Column="26" TopLine="773"/>
+        <Caret Line="196" Column="21" TopLine="178"/>
       </Position23>
       <Position24>
-        <Filename Value="srcmain.pas"/>
-        <Caret Line="113" Column="11" TopLine="103"/>
+        <Filename Value="ubasic.pas"/>
       </Position24>
       <Position25>
-        <Filename Value="srcmain.pas"/>
-        <Caret Line="196" Column="21" TopLine="178"/>
-      </Position25>
-      <Position26>
-        <Filename Value="ubasic.pas"/>
-      </Position26>
-      <Position27>
         <Filename Value="ubarcodes.pas"/>
         <Caret Line="50" Column="3" TopLine="40"/>
-      </Position27>
-      <Position28>
+      </Position25>
+      <Position26>
         <Filename Value="uqr.pas"/>
-      </Position28>
-      <Position29>
+      </Position26>
+      <Position27>
         <Filename Value="uqr.pas"/>
         <Caret Line="7" Column="15"/>
+      </Position27>
+      <Position28>
+        <Filename Value="ubarcodes.pas"/>
+        <Caret Line="9" Column="19" TopLine="2"/>
+      </Position28>
+      <Position29>
+        <Filename Value="uaztec.pas"/>
+        <Caret Line="1400" Column="13" TopLine="1392"/>
       </Position29>
       <Position30>
-        <Filename Value="ubarcodes.pas"/>
-        <Caret Line="9" Column="10" TopLine="2"/>
+        <Filename Value="uaztec.pas"/>
+        <Caret Line="1403" Column="13" TopLine="1393"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

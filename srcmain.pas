@@ -32,7 +32,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   Menus, ExtCtrls, StdCtrls, ExtDlgs, Buttons, EditBtn, DateUtils, LCLType,
-  ComCtrls, ActnList, Spin, ZVDateTimePicker, ubarcodes, LazUTF8, RTTICtrls;
+  ComCtrls, ActnList, Spin, DateTimePicker, ubarcodes, LazUTF8, RTTICtrls;
 
 type
 
@@ -138,8 +138,8 @@ type
     SMS: TTabSheet;
     Url: TTabSheet;
     telNum: TMemo;
-    eventStartDate: TZVDateTimePicker;
-    eventEndDate: TZVDateTimePicker;
+    eventStartDate: TDateTimePicker;
+    eventEndDate: TDateTimePicker;
 
     procedure btnLoadTextClick(Sender: TObject);
     procedure btnQuitClick(Sender: TObject);

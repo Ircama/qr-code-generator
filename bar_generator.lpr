@@ -31,7 +31,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, zvdatetimectrls, runtimetypeinfocontrols, lazcontrols, srcmain
+  Forms, datetimectrls, runtimetypeinfocontrols, lazcontrols, srcmain
   { you can add units after this };
 
 {$R *.res}
